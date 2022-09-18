@@ -1,6 +1,6 @@
 # Docker Jenkins with nodejs :desktop_computer:
 
-# :waving_black_flag:
+# :flag:
 ### 1 STEP
 ```shell
 dokcer build -t DOCKER_IMAGE_NAME .
@@ -41,7 +41,7 @@ When you first access a new Jenkins instance, you are asked to unlock it using a
 docker logs <docker-container-name>
 ```
 
-###  Note: :man_in_lotus_position:
+###  Note: :notes:
 
     The command: sudo cat /var/lib/jenkins/secrets/initialAdminPassword will print the password at console.
     

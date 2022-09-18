@@ -41,7 +41,7 @@ When you first access a new Jenkins instance, you are asked to unlock it using a
 docker logs <docker-container-name>
 ```
 
-### :man_in_lotus_position: Note:
+###  Note: :man_in_lotus_position:
 
     The command: sudo cat /var/lib/jenkins/secrets/initialAdminPassword will print the password at console.
     
@@ -54,7 +54,7 @@ docker logs <docker-container-name>
     
     The Jenkins console log indicates the location (in the Jenkins home directory) where this password can also be obtained. This password must be entered in the setup wizard on new Jenkins installations before you can access Jenkins’s main UI. This password also serves as the default administrator account’s password (with username "admin") if you happen to skip the subsequent user-creation step in the setup wizard.
 
-### :umbrella_on_ground: Customizing Jenkins with plugins
+### Customizing Jenkins with plugins :umbrella_on_ground: 
 After unlocking Jenkins, the Customize Jenkins page appears. Here you can install any number of useful plugins as part of your initial setup.
 
 Click one of the two options shown:

@@ -43,7 +43,7 @@ docker logs <docker-container-name>
 or
 
 ```shell
-docker it exec <docker-container-name> bash && sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+docker exec -it <docker-container-name> bash && sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
 ###  Note: :notes:

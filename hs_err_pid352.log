@@ -1,0 +1,221 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 402653184 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3559), pid=352, tid=9132
+#
+# JRE version:  (17.0.7+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.7+7, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: c:\Users\shubh\.vscode\extensions\open-liberty.liberty-dev-vscode-ext-23.0.6\jars\org.eclipse.lsp4jakarta.ls-0.1.1-jar-with-dependencies.jar
+
+Host: Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz, 8 cores, 23G,  Windows 11 , 64 bit Build 25905 (10.0.25905.1000)
+Time: Wed Jul 19 22:02:50 2023 India Standard Time elapsed time: 2.037434 seconds (0d 0h 0m 2s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002487d8ffc40):  JavaThread "Unknown thread" [_thread_in_vm, id=9132, stack(0x0000006aa4200000,0x0000006aa4300000)]
+
+Stack: [0x0000006aa4200000,0x0000006aa4300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67754a]
+V  [jvm.dll+0x834304]
+V  [jvm.dll+0x835aae]
+V  [jvm.dll+0x836113]
+V  [jvm.dll+0x24696f]
+V  [jvm.dll+0x6743f9]
+V  [jvm.dll+0x668c8a]
+V  [jvm.dll+0x3061bb]
+V  [jvm.dll+0x30d6a6]
+V  [jvm.dll+0x35cece]
+V  [jvm.dll+0x35d0ff]
+V  [jvm.dll+0x2dd048]
+V  [jvm.dll+0x2ddfb4]
+V  [jvm.dll+0x8066d1]
+V  [jvm.dll+0x36ac91]
+V  [jvm.dll+0x7e5cec]
+V  [jvm.dll+0x3ed56f]
+V  [jvm.dll+0x3ef0a1]
+C  [jli.dll+0x528b]
+C  [ucrtbase.dll+0x609e1]
+C  [KERNEL32.DLL+0x124d8]
+C  [ntdll.dll+0x4091]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffa034e7018, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002487d98ac40 GCTaskThread "GC Thread#0" [stack: 0x0000006aa4300000,0x0000006aa4400000] [id=12520]
+  0x000002487d998a50 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000006aa4400000,0x0000006aa4500000] [id=11336]
+  0x000002487d999460 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000006aa4500000,0x0000006aa4600000] [id=7228]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa02cbdaf7]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002487d8facc0] Heap_lock - owner thread: 0x000002487d8ffc40
+
+Heap address: 0x0000000682800000, size: 6104 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000682800000, 0x0000000800000000)
+  region size 4096K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa030a0db9]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.019 Loaded shared library c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6c08c0000 - 0x00007ff6c08ce000 	c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\java.exe
+0x00007ffa8a0c0000 - 0x00007ffa8a2eb000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa89550000 - 0x00007ffa89616000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa874f0000 - 0x00007ffa8784e000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa87ba0000 - 0x00007ffa87cd3000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa367a0000 - 0x00007ffa367b7000 	c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\jli.dll
+0x00007ffa89010000 - 0x00007ffa891c1000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa87ce0000 - 0x00007ffa87d07000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa89f40000 - 0x00007ffa89f69000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa87d10000 - 0x00007ffa87e2f000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa878e0000 - 0x00007ffa87985000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa36780000 - 0x00007ffa36799000 	c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\VCRUNTIME140.dll
+0x00007ffa6d170000 - 0x00007ffa6d401000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.25905.1000_none_87b90b8fab340372\COMCTL32.dll
+0x00007ffa88a40000 - 0x00007ffa88ae7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa880b0000 - 0x00007ffa880e0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa54a30000 - 0x00007ffa54a3c000 	c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\vcruntime140_1.dll
+0x00007ffa03620000 - 0x00007ffa036b1000 	c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\msvcp140.dll
+0x00007ffa029d0000 - 0x00007ffa03618000 	c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\server\jvm.dll
+0x00007ffa87ff0000 - 0x00007ffa880a0000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa883e0000 - 0x00007ffa88480000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa88910000 - 0x00007ffa88a35000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa7f2c0000 - 0x00007ffa7f2f4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa64060000 - 0x00007ffa64069000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa88c20000 - 0x00007ffa88c93000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa7c310000 - 0x00007ffa7c31a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa863d0000 - 0x00007ffa863e8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa51860000 - 0x00007ffa5186a000 	c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\jimage.dll
+0x00007ffa84e70000 - 0x00007ffa850a5000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa891d0000 - 0x00007ffa8954b000 	C:\WINDOWS\System32\combase.dll
+0x00007ffa88ca0000 - 0x00007ffa88d75000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffa70c90000 - 0x00007ffa70cc8000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa87b10000 - 0x00007ffa87b91000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa36750000 - 0x00007ffa36775000 	c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.25905.1000_none_87b90b8fab340372;c:\Users\shubh\.vscode\extensions\redhat.java-1.20.0-win32-x64\jre\17.0.7-win32-x86_64\bin\server
+
+VM Arguments:
+java_command: c:\Users\shubh\.vscode\extensions\open-liberty.liberty-dev-vscode-ext-23.0.6\jars\org.eclipse.lsp4jakarta.ls-0.1.1-jar-with-dependencies.jar
+java_class_path (initial): c:\Users\shubh\.vscode\extensions\open-liberty.liberty-dev-vscode-ext-23.0.6\jars\org.eclipse.lsp4jakarta.ls-0.1.1-jar-with-dependencies.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 4194304                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 402653184                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 6400507904                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 4194304                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 6400507904                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\shubh\.jdks\openjdk-20.0.1
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Users\shubh\OneDrive\Desktop\WINDOWS.X64_193000_db_home\bin;C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\PuTTY\;C:\Users\shubh\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\shubh\AppData\Local\Programs\Python\Python39\;C:\flutter\bin;C:\Users\shubh\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\shubh\AppData\Roaming\npm\adonis.cmd;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-19\bin;C:\Program Files\Maven\apache-maven-3.8.7\bin;C:\Program Files\Gradle\gradle-7.6\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Users\shubh\.jdks\openjdk-20.0.1\bin;C:\Users\shubh\scoop\shims;C:\Users\shubh\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\shubh\AppData\Local\Programs\Python\Python310\;C:\Users\shubh\AppData\Local\pnpm;C:\Users\shubh\AppData\Local\.meteor/;C:\Users\shubh\AppData\Roaming\npm\node_modules\meteor\node_modules\.bin;C:\Users\shubh\AppData\Roaming\npm\node_modules\node_modules\.bin;C:\Users\shubh\AppData\Roaming\npm\node_modules\.bin;C:\Users\shubh\AppData\Roaming\node_modules\.bin;C:\Users\shubh\AppData\node_modules\.bin;C:\Users\shubh\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Users\shubh\AppData\Roaming\npm\node_modules\npm\node_modules\@np
+USERNAME=saurabh
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+TMP=C:\Users\shubh\AppData\Local\Temp
+TEMP=C:\Users\shubh\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 25905 (10.0.25905.1000)
+OS uptime: 0 days 0:23 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 10 microcode 0xde, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, hv
+
+Memory: 4k page, system-wide physical 24413M (785M free)
+TotalPageFile size 26461M (AvailPageFile size 8M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 60M, peak: 444M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.7+7) for windows-amd64 JRE (17.0.7+7), built on Apr 18 2023 22:10:42 by "temurin" with MS VC++ 16.7 (VS2019)
+
+END.

@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.361.1-jdk11
+FROM jenkins/jenkins:lts-jdk11
 USER root
 RUN apt-get update && apt-get install -y lsb-release
 # Install node and npm:

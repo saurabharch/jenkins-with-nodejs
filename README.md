@@ -40,6 +40,11 @@ When you first access a new Jenkins instance, you are asked to unlock it using a
 ```shell
 docker logs <docker-container-name>
 ```
+or
+
+```shell
+docker it exec <docker-container-name> bash && sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
 
 ###  Note: :notes:
 
